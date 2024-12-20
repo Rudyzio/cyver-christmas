@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holidays from Cyver</title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Grotesk%3A300%2Cregular%2C500%2C600%2C700%7CRoboto+Mono%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%7CRaleway%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic&amp;subset=latin%2Clatin-ext&amp;display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SpaceGrotesk', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #ff0099, #6e1bff 45%, #000066);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+            font-weight: 300;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 40px;
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+            font-size: 3em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+        }
+
+        .message {
+            background: rgba(14, 14, 35, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 700px;
+            line-height: 1.7;
+            box-shadow: 0 0 30px rgba(110, 27, 255, 0.2);
+            animation: fadeIn 2s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.1em;
+            font-weight: 300;
+            letter-spacing: 0.2px;
+        }
+
+        .signature {
+            color: #02ffd0;
+            font-weight: 500;
+            margin-top: 30px;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
+        }
+
+        .tree {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #02ffd0;
+            position: relative;
+            margin: 30px auto;
+            animation: sway 3s ease-in-out infinite;
+            opacity: 0.9;
+        }
+
+        .tree::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 80px solid #02ffd0;
+            position: absolute;
+            top: 40px;
+            left: -40px;
+        }
+
+        .tree::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid #02ffd0;
+            position: absolute;
+            top: 80px;
+            left: -30px;
+        }
+
+        .trunk {
+            width: 20px;
+            height: 30px;
+            background: #02ffd0;
+            margin: -10px auto;
+            opacity: 0.9;
+        }
+
+        .star {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffd700;
+            font-size: 24px;
+            animation: twinkle 1s ease-in-out infinite;
+        }
+
+        .snow {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: snowfall linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(2, 255, 208, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(2, 255, 208, 0.8),
+                            0 0 30px rgba(2, 255, 208, 0.6),
+                            0 0 40px rgba(2, 255, 208, 0.4);
+            }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes snowfall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .message {
+                padding: 30px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./Frame 2.png " style="margin-bottom: 20px" />
+        <img src="./Happy Holidays.png" style="margin-bottom: 20px" />
+        <div class="message">
+            Thank you for being an awesome leader and giving us the opportunity to be part of this amazing team. We're so grateful for everything you do to make work feel a little less like "work"!
+            <br><br>
+            We hope your holidays are filled with joy, laughter, and absolutely no code-red situations. Here's to another fantastic year ahead!
+            <div class="signature">Happy Holidays from all of us,<br>the Cyver team</div>
+        </div>
+        <div class="tree">
+            <div class="star">★</div>
+        </div>
+        <div class="trunk"></div>
+    </div>
+
+    <script>
+        function createSnow() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snow');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random() * 0.5;
+            snowflake.style.width = snowflake.style.height = Math.random() * 5 + 5 + 'px';
+            
+            document.body.appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnow, 200);
+    </script>
+</body>
+</html>
